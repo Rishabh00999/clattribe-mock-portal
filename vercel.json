@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/generateWord",
+      "schedule": "0 19 * * *"
+    },
+    {
+      "path": "/api/generateRC",
+      "schedule": "0 19 * * *"
+    }
+  ]
+}
