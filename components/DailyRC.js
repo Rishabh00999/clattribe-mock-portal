@@ -116,11 +116,11 @@ export default function DailyRC() {
                     typeof qObj.answer === "string"
                       ? Math.max(
                           0,
-                          (qObj.answer.toUpperCase().charCodeAt(0) || 65) - 65
+                          (qObj.answer.toUpperCase().charCodeAt(0) || 65) - 65,
                         )
                       : typeof qObj.answer === "number"
-                      ? qObj.answer
-                      : undefined;
+                        ? qObj.answer
+                        : undefined;
 
                   // If we passed userSelections when opening modal, pick it; else undefined
                   const userIndex =
@@ -255,7 +255,7 @@ function QuestionCard({ item, onSubmit, submissions, onView }) {
   const isFound =
     submissions &&
     submissions?.find(
-      (sub) => item.uid == sub.rc_id && sub.student_email == userDetails?.email
+      (sub) => item.uid == sub.rc_id && sub.student_email == userDetails?.email,
     );
 
   return (
@@ -388,9 +388,9 @@ function QuestionCard({ item, onSubmit, submissions, onView }) {
                             Object.entries(answer).map(([k, v]) => [
                               k,
                               parseInt(v, 10),
-                            ])
+                            ]),
                           )
-                        : parseInt(answer, 10)
+                        : parseInt(answer, 10),
                     )
                   : toast.error("Your Answer is empty" + answer);
               }}

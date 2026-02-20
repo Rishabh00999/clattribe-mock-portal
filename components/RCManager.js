@@ -176,7 +176,7 @@ export default function RCManager() {
     } catch (error) {
       console.error(
         `Error ${modalMode === "create" ? "creating" : "updating"} question:`,
-        error
+        error,
       );
     }
   }
@@ -389,7 +389,7 @@ function QuestionModal({
                     color="danger"
                     onPress={() => {
                       const newOptions = question.options.filter(
-                        (_, i) => i !== index
+                        (_, i) => i !== index,
                       );
                       setQuestion({ ...question, options: newOptions });
                     }}

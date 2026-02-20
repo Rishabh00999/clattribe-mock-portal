@@ -2,7 +2,7 @@ import { serversupabase, supabase } from "@/utils/supabaseClient";
 import { Divider, Spinner } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Countdown from "react-countdown";
+import Countdown from "react-countdown"; 
 
 function ClassAttender({data,id}){
 
