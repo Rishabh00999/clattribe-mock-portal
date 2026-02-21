@@ -9,7 +9,7 @@ export default (req, res) => {
       res.status(400).json({ success: false, message: 'Email is required' });
       return;
     }
-a
+
     if (storedEmails.includes(email)) {
       res.status(200).json({ success: true, message: 'Email found in the array' });
     } else {
